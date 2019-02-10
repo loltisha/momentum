@@ -1,14 +1,14 @@
 function quotesSuccess(response) {
-    console.log('Hi');
-    console.log(response);
-     const quote=response.data.quoteText;
-    $('body').append(`<h1>${quote}</h1>`);
-    }
-    function quotesFail(error) {
-  console.log(error);
-    
+  console.log('Hi');
+  console.log(response);
+  const quote = response.data.quoteText;
+  // eslint-disable-next-line no-undef
+  $('body').append(`<h1>"${quote}"</h1>`);
 }
-    
+function quotesFail(error) {
+  console.log(error);
+}
+
 
 // eslint-disable-next-line no-undef
 axios({
